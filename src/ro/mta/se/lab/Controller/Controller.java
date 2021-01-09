@@ -20,102 +20,40 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class Controller implements Initializable {
-    private CountryClass Country;
-    private CityClass City;
-    private WeatherClass Weather;
+
     private WeatherAPIClass WeatherAPI;
     private CityWeather  CityWeather;
+    private ReadInitialDataClass MyFileReader;
     @FXML
     ChoiceBox CountryId;
     @FXML
     ChoiceBox CityId;
+
     @FXML
-    Button WeatherId;
+    private Button WeatherId;
+
 
     public Controller() {
-        Weather = new WeatherClass();
+
+        WeatherAPI = new WeatherAPIClass();
         CityWeather = new CityWeather();
+        MyFileReader=new ReadInitialDataClass();
         CountryId = new ChoiceBox();
         CityId = new ChoiceBox();
-        WeatherId = new Button();
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-            File myfile = new File("src/ro/mta/se/lab/Resources/Cities.txt");
-            BufferedReader myReader;
-            myReader = new BufferedReader(new FileReader(myfile));
-            String data= myReader.readLine();
-            data=myReader.readLine();
-            while (data!=null) {
-                String[] dataArray = data.split("\\|");
-                int i=0;
-                City = new CityClass();
-                City.setCityId(Integer.parseInt(dataArray[i]));
-                i++;
-                City.setCityName(dataArray[i]);
-                i++;
-                City.setLat(Float.parseFloat(dataArray[i]));
-                i++;
-                City.setLon(Float.parseFloat(dataArray[i]));
-                i++;
-                City.setCountryCode(dataArray[i]);
-                int ok=1;
-                for (int k = 0; k < Weather.getCountryList().size(); k++) {
-                        if (City.getCountryCode().equals(Weather.getCountryList().get(k).getCountryCode()) ){
-                            Weather.getCountryList().get(k).addCity(City);
-                            ok=0;
-                            break;
-                            }
-                }
-                if(ok==1)
-                {
-                    Country=new CountryClass();
-                    Country.addCity(City);
-                    Country.setCountryCode(dataArray[i]);
-                    Weather.addCountry(Country);
-                }
-
-
-                data=myReader.readLine();
-            }
-            myReader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("Eroare la citirea datelor din fisierul de intrare.");
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-        for(int i=0;i<Weather.getCountryList().size();i++) {
-            CountryId.getItems().add(Weather.getCountryList().get(i).getCountryCode());
-        }
-
-        CountryId.getSelectionModel().selectedIndexProperty().addListener((v, oldValue, newValue)->
-        {
-            CityId.getItems().clear();
-            int index = (int)newValue;
-            ArrayList<CityClass> Cities =new ArrayList<CityClass>();
-            Cities.addAll(Weather.getCountryList().get(index).getCityList());
-            ObservableList<String> CityList = FXCollections.observableArrayList();
-            for(int i=0;i<Cities.size();i++)
-            {
-                CityList.add(Cities.get(i).getCityName());
-            }
-            CityId.getItems().addAll(CityList);
-            }
-        );
-
+        String filename="src/ro/mta/se/lab/Resources/Cities.txt";
+        MyFileReader.ReadSetData(filename);
+        MyFileReader.setSelectBox(CountryId,CityId);
     }
 
 
     public void onPressWeatherButton(ActionEvent actionEvent) throws ParseException, IOException {
         String response;
         String City= (String) CityId.getValue();
-        WeatherAPI = new WeatherAPIClass();
         WeatherAPI.setConnection(City,"metric","en");
         response=WeatherAPI.getResponse();
         CityWeather.setParameters(response);
