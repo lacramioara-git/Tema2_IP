@@ -1,0 +1,141 @@
+[{
+  "ID": "1",
+  "CityName": "Paris",
+  "lat": 48.8566,
+  "lon": 2.3522,
+  "CountryCode": "FR"
+},
+  {
+    "ID": "2",
+    "CityName": "Bordeaux",
+    "lat": 44.8378,
+    "lon": 0.5792,
+    "CountryCode": "FR"
+  },
+  {
+    "ID": "3",
+    "CityName": "London",
+    "lat": 51.5074,
+    "lon": 0.1278,
+    "CountryCode": "GB"
+  },
+  {
+    "ID": "4",
+    "CityName": "New York",
+    "lat": 40.7128,
+    "lon": 74.0060,
+    "CountryCode": "US"
+  },
+  {
+    "ID": "5",
+    "CityName": "Los Angeles",
+    "lat": 34.0522,
+    "lon": 118.2437,
+    "CountryCode": "US"
+  },
+  {
+    "ID": "6",
+    "CityName": "liverpool",
+    "lat": 53.4084,
+    "lon": 2.9916,
+    "CountryCode": "GB"
+  },
+  {
+    "ID": "7",
+    "CityName": "Rome",
+    "lat": 41.9028,
+    "lon": 12.4964,
+    "CountryCode": "IT"
+  },
+  {
+    "ID": "8",
+    "CityName": "Milan",
+    "lat": 45.4642,
+    "lon": 9.1900,
+    "CountryCode": "IT"
+  },
+  {
+    "ID": "9",
+    "CityName": "Razvilka",
+    "lat": 55.591667,
+    "lon": 37.740833,
+    "CountryCode": "RU"
+  },
+  {
+    "ID": "10",
+    "CityName": "Moscow",
+    "lat": 55.752220,
+    "lon": 37.615555,
+    "CountryCode": "RU"
+  },
+  {
+    "ID": "11",
+    "CityName": "Toronto",
+    "lat": 43.6532,
+    "lon": 79.3832,
+    "CountryCode": "CA"
+  },
+  {
+    "ID": "12",
+    "CityName": "Montreal",
+    "lat": 45.5017,
+    "lon": 73.5673,
+    "CountryCode": "CA"
+  },
+  {
+  "ID": "13",
+  "CityName": "Beijing",
+  "lat": 39.9042,
+  "lon": 116.4074,
+  "CountryCode": "CN"
+},
+  {
+  "ID": "14",
+  "CityName": "Wuhan",
+  "lat": 30.5928,
+  "lon": 114.3055,
+  "CountryCode": "CN"
+},
+  {
+    "ID": "15",
+    "CityName": "Berlin",
+    "lat": 52.5200,
+    "lon": 13.4050,
+    "CountryCode": "DE"
+  },
+  {
+    "ID": "16",
+    "CityName": "Munich",
+    "lat": 48.1351,
+    "lon": 11.5820,
+    "CountryCode": "DE"
+  },
+  {
+    "ID": "17",
+    "CityName": "Lisbon",
+    "lat": 38.7223,
+    "lon": 9.1393,
+    "CountryCode": "PT"
+  },
+  {
+    "ID": "18",
+    "CityName": "Porto",
+    "lat": 41.1579,
+    "lon": 8.6291,
+    "CountryCode": "PT"
+  },
+  {
+    "ID": "19",
+    "CityName": "Bucuresti",
+    "lat": 44.4268,
+    "lon": 26.1025,
+    "CountryCode": "RO"
+  },
+  {
+    "ID": "20",
+    "CityName": "Brasov",
+    "lat": 45.6427,
+    "lon": 25.5887,
+    "CountryCode": "RO"
+  }
+]
