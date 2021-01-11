@@ -81,11 +81,11 @@ public class CityWeather {
         String display="City: " + this.CityName + " , " + this.CountryCode + "\n"+
                         "Weather: " + this.description + "\n" +
                         "Ski: " + this.mainState + "\n" +
-                        "Temerature: " + this.temperature + "\n" +
-                        "Feels_like: " + this.feels_like + "\n" +
-                        "Pressure: " + this.pressure + "\n" +
-                        "Humidity: " + this.humidity + "\n" +
-                        "Wind: " +this.wind + "\n";
+                        "Temerature: " + this.temperature + " °C" + "\n" +
+                        "Feels_like: " + this.feels_like +" °C" + "\n" +
+                        "Pressure: " + this.pressure + " hPa" + "\n" +
+                        "Humidity: " + this.humidity + " %" +"\n" +
+                        "Wind: " +this.wind + " m/s" +"\n\n";
         return display;
     }
 

@@ -36,7 +36,6 @@ public class WeatherAPIClass {
             json.append(tmp).append("\n");
         reader.close();
         this.response = json.toString();
-
         }
     }
 
