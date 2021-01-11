@@ -2,11 +2,10 @@ package ro.mta.se.lab.Model;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class CityWeather {
+public class CityWeather implements WeatherInfoInterface {
     private double temperature;
     private double feels_like;
     private double pressure;
@@ -54,6 +53,7 @@ public class CityWeather {
         return description;
     }
 
+    @Override
     public void setParameters(String response) throws ParseException {
         JSONParser parser = new JSONParser();
         JSONObject json = (JSONObject) parser.parse(response);
@@ -76,6 +76,7 @@ public class CityWeather {
 
     }
 
+    @Override
     public String display()
     {
         String display="City: " + this.CityName + " , " + this.CountryCode + "\n"+

@@ -21,7 +21,7 @@ import java.util.Scanner;
 public class Controller implements Initializable {
 
     private WeatherAPIClass WeatherAPI;
-    private CityWeather  CityWeather;
+    private WeatherInfoInterface  CityWeather;
     private ReadInitialDataClass MyFileReader;
     @FXML
     ChoiceBox CountryId;
