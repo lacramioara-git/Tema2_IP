@@ -2,11 +2,9 @@ package ro.mta.se.lab.Model;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Scanner;
 
 public class WeatherAPIClass {
     private String key;
@@ -29,13 +27,13 @@ public class WeatherAPIClass {
 
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-        StringBuffer json = new StringBuffer(1024);
+        StringBuffer serverResponse = new StringBuffer(1024);
         String tmp = "";
 
         while((tmp = reader.readLine()) != null)
-            json.append(tmp).append("\n");
+            serverResponse.append(tmp).append("\n");
         reader.close();
-        this.response = json.toString();
+        this.response = serverResponse.toString();
         }
     }
 

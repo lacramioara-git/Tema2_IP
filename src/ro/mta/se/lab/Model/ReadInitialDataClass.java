@@ -2,8 +2,6 @@ package ro.mta.se.lab.Model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 
 import java.io.*;
@@ -16,8 +14,6 @@ public class ReadInitialDataClass {
 
     public ReadInitialDataClass() {
         Weather = new WeatherClass();
-
-
     }
 
 
