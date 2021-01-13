@@ -17,6 +17,7 @@ public class Controller implements Initializable {
     private WeatherAPIClass WeatherAPI;
     private WeatherInfoInterface  CityWeather;
     private ReadInitialDataClass MyFileReader;
+    private HistorySearchClass History;
     @FXML
     ChoiceBox CountryId;
     @FXML
@@ -26,7 +27,7 @@ public class Controller implements Initializable {
     public Controller() {
 
         WeatherAPI = new WeatherAPIClass();
-
+        History=new HistorySearchClass();
         MyFileReader=new ReadInitialDataClass();
         CountryId = new ChoiceBox();
         CityId = new ChoiceBox();
@@ -45,7 +46,9 @@ public class Controller implements Initializable {
         String response;
         String City = (String) CityId.getValue();
         WeatherAPI.setConnection(City, "metric", "en");
+        String fileout="src/ro/mta/se/lab/Resources/WeatherHistory.txt";
         response = WeatherAPI.getResponse();
+        History.writeSerchResult(fileout,response,City);
         CityWeather = new CityWeather();
         CityWeather.setParameters(response);
         String title = City + " Weather";
@@ -53,4 +56,5 @@ public class Controller implements Initializable {
         AlertBox alert=new AlertBox();
         alert.displayWeather(title,CityWeather.display(),exitmsg);
     }
+
 }
