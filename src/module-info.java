@@ -4,7 +4,7 @@ module WeatherApplication {
     requires javafx.controls;
     requires json.simple;
     requires junit;
-   // requires mockito.all;
+    requires org.mockito;
 
     opens ro.mta.se.lab;
     opens ro.mta.se.lab.Controller;
