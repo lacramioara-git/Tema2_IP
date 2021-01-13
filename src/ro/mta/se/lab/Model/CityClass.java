@@ -23,8 +23,9 @@ public class CityClass {
         this.lon = lon;
     }
 
-    public void setCountryCode(String countryCode) {
+    public double setCountryCode(String countryCode) {
         CountryCode = countryCode;
+        return 0;
     }
 
     public String getCityName() {

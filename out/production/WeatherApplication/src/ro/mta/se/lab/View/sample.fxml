@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.se.lab.Controller.Controller">
+<children>
+   <TitledPane alignment="CENTER" animated="false" contentDisplay="CENTER" prefHeight="500.0" prefWidth="600.0" text="Weather Application" textFill="#7c1212">
+      <content>
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="410.0" prefWidth="593.0">
+            <children>
+               <ChoiceBox  fx:id="CountryId"  layoutX="48.0" layoutY="67.0" prefHeight="35.0" prefWidth="190.0" />
+               <ChoiceBox fx:id="CityId"  layoutX="48.0" layoutY="168.0" prefHeight="35.0" prefWidth="190.0" />
+               <Label layoutX="48.0" layoutY="31.0" prefHeight="36.0" prefWidth="132.0" text="Country:" textFill="#6f0f0f">
+                  <font>
+                     <Font name="Times New Roman Bold" size="24.0" />
+                  </font>
+               </Label>
+               <Label layoutX="48.0" layoutY="134.0" prefHeight="34.0" prefWidth="123.0" text="City:" textFill="#6f0f0f">
+                  <font>
+                     <Font name="Times New Roman Bold" size="24.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="190.0" fitWidth="281.0" layoutX="286.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../Resources/8bc363c72e7a756df339eff1d953d102.jpg" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="160.0" fitWidth="135.0" layoutX="14.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../Resources/8238191_exclamation-mark-question-mark-png-download.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="WeatherId" onAction="#onPressWeatherButton"  layoutX="347.0" layoutY="315.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="145.0" text="Weather" textFill="#6f0f0f">
+                  <font>
+                     <Font name="Times New Roman Bold" size="20.0" />
+                  </font>
+               </Button>
+
+            </children>
+         </AnchorPane>
+      </content>
+      <font>
+         <Font name="Times New Roman Bold" size="28.0" />
+      </font>
+   </TitledPane>
+</children>
+</AnchorPane>

@@ -16,7 +16,17 @@ public class ReadInitialDataClass {
         Weather = new WeatherClass();
     }
 
+    public CityClass getCity() {
+        return City;
+    }
 
+    public CountryClass getCountry() {
+        return Country;
+    }
+
+    public WeatherClass getWeather() {
+        return Weather;
+    }
 
     public void ReadSetData(String filename) {
         try {

@@ -1,22 +1,16 @@
 package ro.mta.se.lab.Controller;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import org.json.simple.parser.ParseException;
 import ro.mta.se.lab.Model.*;
 
-import java.io.*;
+import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.Scanner;
+
 
 public class Controller implements Initializable {
 
@@ -27,9 +21,6 @@ public class Controller implements Initializable {
     ChoiceBox CountryId;
     @FXML
     ChoiceBox CityId;
-
-    @FXML
-    private Button WeatherId;
 
 
     public Controller() {
