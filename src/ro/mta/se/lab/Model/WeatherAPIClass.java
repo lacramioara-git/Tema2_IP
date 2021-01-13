@@ -12,7 +12,15 @@ public class WeatherAPIClass {
     private String Url;
 
     public String getResponse() {
-        return response;
+        return this.response;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public String getUrl() {
+        return Url;
     }
 
     public WeatherAPIClass() {
@@ -27,11 +35,11 @@ public class WeatherAPIClass {
 
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-        StringBuffer serverResponse = new StringBuffer(1024);
+        StringBuffer serverResponse = new StringBuffer(4096);
         String tmp = "";
 
         while((tmp = reader.readLine()) != null)
-            serverResponse.append(tmp).append("\n");
+            serverResponse.append(tmp);
         reader.close();
         this.response = serverResponse.toString();
         }

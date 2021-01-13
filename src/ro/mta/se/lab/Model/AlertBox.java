@@ -18,7 +18,6 @@ public class AlertBox {
         this.alert.setHeaderText(message);
         this.alert.setResizable(false);
         this.alert.setContentText(exit_message);
-
         Optional<ButtonType> result = alert.showAndWait();
         ButtonType button = result.orElse(ButtonType.CLOSE);
 
