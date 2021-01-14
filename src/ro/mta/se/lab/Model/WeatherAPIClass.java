@@ -6,7 +6,21 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+
+/**
+ * Acesta clasa este implementata pentru a realiza conexiunea la server,
+ * a crea API request si de a returna raspunsul primit in urma trimiterii requestului.
+ *
+ * @author Runcan Lacramioara
+ */
+
 public class WeatherAPIClass {
+    /**
+     * @param key cheia unica folosita pentru conexiunea la server
+     * @param Url calea catre aplicatia web de vreme
+     * @param response raspunsul primit de la server in urma cererii
+     */
+
     private String key;
     private String response;
     private String Url;
@@ -30,6 +44,10 @@ public class WeatherAPIClass {
     }
 
     //url http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&lang=ro&appid=3d50b284adb0f5b101a2499c468375d7
+    /**
+     * Acesta metoda seteaza conexiunea cu serverul si returneaza raspunsul dat de acesta in  urma interogarii
+     */
+
     public void setConnection(String CityName,String units,String lang) throws IOException {
         URL url = new URL(this.Url + "q=" + CityName + "&" + "units=" + units + "&" + "lang=" + lang + "&" + "appid=" + this.key);
 

@@ -10,11 +10,20 @@ import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-
+/**
+ * Acesta clasa este implementata pentru a testa corectitudinea functionarii aplicatiei
+ * Se testeaza corectitudinea in momentul adaugarii tarilor in lista de la nivelul clasei WeatherClass.
+ *
+ * @author Runcan Lacramioara
+ */
 public class TestWeather {
 
     private CountryClass Country;
     private WeatherClass Weather;
+    /**
+     * Acesta metoda este implementata pentru a crea un obiect mock pentru Clasa CountryClass
+     */
+
     @Before
     public void setUp()
     {

@@ -8,6 +8,12 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+/**
+ * Acesta clasa este implementata pentru a testa corectitudinea functionarii aplicatiei
+ * Se testeaza corectitudinea stabilirii conexiunii la server si a raspunsului primit
+ * in urma cererilor trimise.
+ * @author Runcan Lacramioara
+ */
 public class TestWeatherAPI {
 
     @Test
