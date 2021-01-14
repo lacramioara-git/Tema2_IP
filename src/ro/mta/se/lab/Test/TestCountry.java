@@ -8,11 +8,21 @@ import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+/**
+ * Acesta clasa este implementata pentru a testa corectitudinea functionarii aplicatiei
+ * Se testeaza corectitudinea in momentul adaugarii oraselor in lista de la nivelul clasei CountryClass.
+ *
+ * @author Runcan Lacramioara
+ */
 
 public class TestCountry {
 
     private CountryClass Country;
     private CityClass City;
+    /**
+     * Acesta metoda este implementata pentru a crea un obiect mock pentru Clasa CityClass
+     */
+
     @Before
     public void setUp()
     {

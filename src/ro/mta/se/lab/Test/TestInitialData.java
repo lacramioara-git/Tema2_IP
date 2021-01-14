@@ -9,6 +9,12 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+/**
+ * Acesta clasa este implementata pentru a testa corectitudinea functionarii aplicatiei
+ * Se testeaza corectitudinea extragerii datelor din fisierul initial.
+ *
+ * @author Runcan Lacramioara
+ */
 public class TestInitialData {
 
     @Test

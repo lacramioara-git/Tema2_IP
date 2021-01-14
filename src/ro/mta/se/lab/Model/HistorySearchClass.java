@@ -6,7 +6,18 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Acesta clasa este implementata pentru a crea un fisier in care se va retine istoricul cautarilor
+ * detaliilor despre orase.
+ *
+ * @author Runcan Lacramioara
+ */
+
 public class HistorySearchClass {
+
+    /**
+     * Acesta functie este folosita pentru a crea un fisier in care se va retine istoricul cautarilor
+     */
 
     public void createFile(String filename) {
         try {
@@ -23,6 +34,10 @@ public class HistorySearchClass {
 
     }
 
+    /**
+     * Acesta functie implementeaza scrierea in fisier a datei si orei la care s-a primit raspunsul de la server,
+     * numele orasului selectat si raspunsul cu detaliile legate de vreme.
+     */
 
     public void writeSerchResult(String outfile,String response,String Cityname)
     {

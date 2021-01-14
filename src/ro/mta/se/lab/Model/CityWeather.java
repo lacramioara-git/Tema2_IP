@@ -5,7 +5,19 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+/**
+ * Acesta clasa mosteneste metodele interfetei WeatherInfoInterface si este folosita
+ * pentru a retine datele de interes despre vremea la nivelul orasului selectat
+ *
+ * @author Runcan Lacramioara
+ */
+
 public class CityWeather implements WeatherInfoInterface {
+    /**
+     * membrii clasei CityWeather
+     */
+
+
     private double temperature;
     private double feels_like;
     private double pressure;
@@ -14,6 +26,10 @@ public class CityWeather implements WeatherInfoInterface {
     private String description;
     private String CityName;
     private String CountryCode;
+
+    /**
+     * Acesta clasa contine metode de tip setter si getter a membrilor.
+     */
 
     public String getMainState() {
         return mainState;
@@ -53,6 +69,12 @@ public class CityWeather implements WeatherInfoInterface {
         return description;
     }
 
+
+    /**
+     * Acesta functie suprascrie metoda din interfata si este folosita pentru a parsa obiectul JSON
+     * primit ca raspuns de la server, si a extrage datele necesarii afisarii vremii
+     */
+
     @Override
     public void setParameters(String response) throws ParseException {
         JSONParser parser = new JSONParser();
@@ -75,6 +97,12 @@ public class CityWeather implements WeatherInfoInterface {
 
 
     }
+
+    /**
+     * Acesta functie este de asemenea suprascrisa si se foloseste pentru a crea
+     * mesajul care va fi afisat la apasarea butonului Weather,prin concatenarea
+     * valorilor extrase din obiectul JSON returnat de server.
+     */
 
     @Override
     public String display()

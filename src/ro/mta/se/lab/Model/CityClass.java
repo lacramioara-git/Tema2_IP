@@ -1,11 +1,31 @@
 package ro.mta.se.lab.Model;
+/**
+ * Acesta clasa este implementata pentru a reprezenta un oras cu toate detaliile lui initiale.
+ *
+ * @author Runcan Lacramioara
+ */
+
 
 public class CityClass {
+    /**
+     * @param CityName - numele orasului
+     * @param CityId - id ul orasului
+     * @param lat- latitudinea orasului
+     * @param lon -longitudinea orasului
+     * @param CountryCode - codul tarii din care face parte
+     *
+     */
+
     private String CityName;
     private int CityId;
     private float lat;
     private float lon;
     private String CountryCode;
+
+    /**
+     * Acesta clasa contine metode de tip setter si getter pentru membrii acesteia
+     *
+     */
 
     public void setCityName(String cityName) {
         CityName = cityName;

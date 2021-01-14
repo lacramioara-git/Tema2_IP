@@ -3,9 +3,15 @@ package ro.mta.se.lab.Model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ChoiceBox;
-
 import java.io.*;
 import java.util.ArrayList;
+
+/**
+ * Acesta clasa este implementata pentru a citi datele initiale despre orase din fisierul dat
+ * si pentru a initializa la deschiderea interfetei grafice a listelor cu tari si orase disponibile.
+ *
+ * @author Runcan Lacramioara
+ */
 
 public class ReadInitialDataClass {
     private CountryClass Country;
@@ -27,6 +33,11 @@ public class ReadInitialDataClass {
     public WeatherClass getWeather() {
         return Weather;
     }
+
+
+    /**
+     * Acesta functie este folosita pentru a crea orase si tari in functie de datele din fisierul initial
+     */
 
     public void ReadSetData(String filename) {
         try {
@@ -75,6 +86,11 @@ public class ReadInitialDataClass {
         }
 
     }
+
+    /**
+     * Acesta functie initializeaza listele de tari si orase in ChoiceBox urile din interfata
+     * Pentru fiecare tara selectata se vor afisa doar orasele apartinand acesteia
+     */
 
     public void setSelectBox(ChoiceBox CountryId,ChoiceBox CityId)
     {
