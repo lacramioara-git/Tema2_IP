@@ -11,8 +11,8 @@
 
 
 ##### Output-ul aplicației 
-#####În urma apăsării acestui buton se va afișa:
-1. Numele orașului
+##### În urma apăsării acestui buton se va afișa:
+1. Numele orașului selectat
 2. Descrierea pe scurt a vremii
 3. Starea 
 4. Temperatura în grade C
