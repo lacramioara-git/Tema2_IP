@@ -11,7 +11,7 @@
 
 
 ##### Output-ul aplicației 
-#####În urma apăsării acestui buton se va afișa:
+##### În urma apăsării acestui buton se va afișa:
 1. Numele orașului
 2. Descrierea pe scurt a vremii
 3. Starea 
